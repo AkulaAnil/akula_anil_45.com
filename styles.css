@@ -1,0 +1,599 @@
+:root {
+    /* ------------- intial styles ---------------- */
+    /* 
+    --bg-color-body: #edf0f1;
+    --bg-color-navbar: #66A5AD;
+    --bg-color-navbar-mobile: #2c3e50;
+    --bg-color-card_item: #005f73;
+    --bg-color-coursel_block: #005f73;
+    --bg-color-education_block: #005f73;
+    --bg-color-skills_circle-block: #ecf0f1;
+    --bg-color-contact_links-block: #9ab1ba;
+    --bg-color-footer: #333;
+    --bg-color-accordian-block: #9ab1ba; 
+
+    --text-color-navbar: white;
+    --text-color-navbar-hover: #0082e6;
+    --text-banner_section_span_hi: #edacac;
+    --text-banner_section_text: white;
+    --text-banner_section_role_text: lightgrey;
+    --text-color-card_item: white;
+    --text-color-card_key: red;
+    --text-color-card_value: #e9d2d2;
+    --text-color-coursel-key: red;
+    --text-color-coursel-value: #e9d2d2;
+    --text-color-education-block: #2c3e50;
+    --text-color-education-right_side-numbers: #7f8c8d;
+    --text-color-skills_circle-value: #3498db;
+    --text-color-skills_circle-text: #34495e;
+    --text-color-footer: lightgrey;
+
+    --ff-body: 'Abel';
+    --ff-nav-logo: 'Arizonia';
+    --ff-copy-right-name: 'Grechen Fuemen';
+    
+    */
+
+    --bg-color-body: #edf0f1;
+    --bg-color-navbar: #3AAFA9;
+    --bg-color-navbar-mobile: #17252A;
+    --bg-color-card_item: #88BDBC;
+    --bg-color-coursel_block: #254E58;
+    --bg-color-education_block: #687864;
+    --bg-color-skills_circle-block: #99CED3;
+    --bg-color-contact_links-block: #2B7A78;
+    --bg-color-footer: #333;
+    --bg-color-accordian-block: #9ab1ba;
+
+    --text-color-navbar: #185955;
+    --text-color-navbar-mobile: #978f8f;
+    --text-color-navbar-hover: #0082e6;
+    --text-banner_section_span_hi: #3aafa9;
+    --text-banner_section_text: #acb9b9;
+    --text-banner_section_role_text: lightgrey;
+    --text-color-section-title: #697a7a;
+    --text-color-card_item: white;
+    --text-color-card_key: #7e7676;
+    --text-color-card_value: #658a8b;
+    --text-color-coursel-key: #88bdbc;
+    --text-color-coursel-value: #f5f5f5;
+    --text-color-education-block: #929f8f;
+    --text-color-education-right_side-numbers: #6a6767;
+    --text-color-skills_circle-value: #3498db;
+    --text-color-skills_circle-text: #71949a;
+    --text-color-contact_links-text: #b7cccb;
+    --text-color-footer: lightgrey;
+
+    --ff-entire-body: cursive, sans-serif;
+    --ff-nav-logo: 'Arizonia';
+    --ff-copy-right-name: 'Grechen Fuemen';
+
+    /* --bg-color-navbar: #69688a; */
+
+    /* --ff-body: 'Arapey'; */
+    /* --ff-body: 'Abel'; */
+    /* --ff-body: 'Bad Script'; */
+    /* --ff-body: 'Bellota'; */
+    /* --ff-body: 'Atma'; */
+    /* --ff-body: sans-serif; */
+
+    /* --ff-nav-logo: 'Alex Brush';
+    --ff-nav-logo: 'Akronim'; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color-body);
+    font-family: var(--ff-entire-body) !important;
+}
+
+.header_main {
+    background-color: var(--bg-color-navbar);
+    height: 80px;
+    width: 100%;
+}
+
+.header_main .nav_bar .nav_logo_content {
+    font-family: var(--ff-nav-logo);
+    color: var(--text-color-navbar);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+.header_main .nav_bar .nav_list {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+.header_main .nav_bar .nav_list li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    padding: 7px 13px;
+    border-radius: 5px;
+}
+
+.header_main .nav_bar .nav_list li a {
+    color: var(--text-color-navbar);
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.header_main .nav_bar .nav_list li a.active, .header_main .nav_bar .nav_list li a:hover {
+    color: var(--text-color-navbar-hover);
+    transition: 0.5s;
+}
+
+.check_btn {
+    font-size: 30px;
+    color: var(--text-color-navbar);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+@media (max-width: 990px) {
+    .check_btn {
+        display: block;
+    }
+    .header_main .nav_bar .nav_list {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        background-color: var(--bg-color-navbar-mobile);
+        transition: all .5s;
+    }
+    .header_main .nav_bar .nav_list li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .header_main .nav_bar .nav_list li a {
+        font-size: 20px;
+        color: var(--text-color-navbar-mobile);
+    }
+    .header_main .nav_bar .nav_list li a.active, .header_main .nav_bar .nav_list li a:hover {
+        background: none;
+        color: var(--text-color-navbar-hover);
+    }
+    #check:checked ~ ul {
+        left: 0;
+        z-index: 999;
+    }
+    /* #check:not(:checked) ~ ul {
+        display: none;
+    } */
+}
+
+@media (max-width: 426px) {
+    .header_main .nav_bar .nav_logo_content {
+        font-size: 30px;
+        padding: 0 20px;
+    }
+}
+
+
+/* banner section */
+
+.banner_with_image {
+    background-image: url("assets/images/my_crop_3.jpg");
+    background-position: center;
+  	background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    /* height: 100vh; */
+}
+
+.banner_section_content {
+    color: var(--text-banner_section_text);
+    width: 50%;
+    padding-block: 20%;
+    margin-left: 2%;
+    /* color: white;
+    width: 50%;
+    margin: auto;
+    padding-block: 10%;
+    font-size: 30px; */
+}
+/* Kaushan Script */
+.banner_section_content h2 {
+    margin: 5px;
+    padding: 0;
+    font-size: 50px;
+}
+.banner_section_content .banner_name {
+    font-family: "Kaushan Script", cursive;;
+}
+.banner_section_content p {
+    font-size: 30px;
+}
+
+.banner_span {
+    font-weight: 700;
+    color: var(--text-banner_section_span_hi);
+    font-family: 'Bilbo Swash Caps';
+}
+
+.my_role {
+    opacity: 0.8;
+    color: var(--text-banner_section_role_text);
+    font-style: italic;
+    font-size: large;
+}
+
+@media (max-width: 990px) {
+    .banner_with_image {
+        height: 70vh;
+    }
+    .banner_section_content {
+        font-size: 20px;
+    }
+    .banner_section_content h2 {
+        font-size: 30px;
+    }
+    .banner_section_content p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 426px) {
+    .banner_section_content h2 {
+        font-size: 22px;
+    }
+    .banner_section_content p {
+        font-size: 16px;
+    }
+}
+
+/* companies list */
+
+.body_container {
+    width: 95%;
+    margin: auto;
+    padding-block: 1%;
+}
+.section_title {
+    color: var(--text-color-section-title);
+}
+
+.companies_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_block {
+    width: 100%;
+    margin: 10px 0;
+}
+.companies_list :not(:first-child) {
+    margin: 0 10px;
+}
+
+.card_item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: var(--bg-color-card_item);
+    color: var(--text-color-card_item);
+}
+.card_item:hover {
+    transform: scale(.9);
+    transition: all .5s;
+}
+
+.company_logo {
+    width: 200px;
+    height: 100px;
+}
+.company_key {
+    color: var(--text-color-card_key);
+    font-weight: bold;
+}
+.company_value {
+    color: var(--text-color-card_value);
+}
+
+@media (max-width: 990px) {
+    .companies_list {
+        flex-wrap: wrap;
+    }
+    .card_block {
+        margin: 10px 0;
+    }
+    .companies_list :not(:first-child) {
+        margin: 10px 0;
+    }
+}
+
+/* Projects List */
+
+.projects_list {
+    margin-top: 2%;
+}
+/* .acc_item_custom {
+    margin-top: 10px;
+    border: 1px solid var(--bg-color-coursel_block) !important;
+}
+
+.acc_item_custom .accordion-button {
+    background-color: var(--bg-color-accordian-block) !important;
+} */
+
+
+/*
+   ------------------------------ COURSEL STYLES CODE ------------------------------
+*/
+.carousel_item {
+    width: 100%;
+    height: 400px !important;
+    background-color: var(--bg-color-coursel_block);
+}
+
+.text_wrapping_left_side {
+    text-align: left !important;
+    /* padding: 10px; */
+    font-size: 12px;
+}
+
+.carousel_project_name_strong {
+    color: var(--text-color-coursel-key);
+    font-weight: 600;
+}
+.carousel_project_name_text {
+    color: var(--text-color-coursel-value);
+}
+
+@media (max-width: 990px) {
+    .text_wrapping_left_side {
+        font-size: 10px;
+    }
+}
+@media (max-width: 426px) {
+    .text_wrapping_left_side {
+        font-size: 8px;
+    }
+}
+
+/* Education Details */
+
+.education {
+    margin: 20px 0;
+}
+.timeline {
+    border-left: 3px solid var(--bg-color-education_block);
+    margin-top: 2%;
+    width: 70%;
+    margin: auto;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--bg-color-education_block);
+    padding-bottom: 10px;
+}
+.timeline-item:last-of-type {
+    border-bottom: none;
+}
+
+.timeline-item h4, .timeline-item h5, .timeline-item h6 {
+    font-size: 1.5rem;
+    color: var(--text-color-education-block);
+}
+
+.timeline-item span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color-education-right_side-numbers);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-color-education_block);
+    border-radius: 50%;
+}
+
+.education_year_percentage {
+    display: block;
+    float: right;
+}
+
+@media (max-width: 990px) {
+    .timeline {
+        width: 90%;
+    }
+}
+@media (max-width: 446px) {
+    .timeline {
+        width: 95%;
+    }
+    .timeline-item h4 {
+        font-size: 1.2rem;
+    }
+    .timeline-item h5 {
+        font-size: 1.1rem;
+    }
+    .timeline-item h6 {
+        font-size: 1rem;
+    }
+}
+
+/* skills */
+
+.skills {
+    margin: 7% 0;
+}
+
+.skill-circles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-color-skills_circle-block);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.skill-value {
+    font-size: 1.75rem;
+    color: var(--text-color-skills_circle-value); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle h3 {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-color-skills_circle-text);
+}
+.circle h4 {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: var(--text-color-skills_circle-text);
+}
+.back_to_top {
+    float: right;
+    margin-right: 2%;
+    border-bottom: 2px solid var(--bg-color-card_item);
+}
+.back_to_top a {
+    text-decoration: none !important;
+    color: var(--bg-color-footer);
+}
+.back_to_top a:hover {
+    text-decoration: none;
+    color: var(--bg-color-navbar);
+}
+
+/* personal info */
+
+.personal_info .contact_links {
+    background-color: var(--bg-color-contact_links-block);
+    /* height: 100px; */
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.contact-link {
+    color: var(--text-color-contact_links-text);
+    margin: 10px;
+    text-decoration: none;
+}
+.social_links {
+    width: 50%;
+    margin: auto;
+    font-size: 18px;
+}
+/* .social_links a {
+    color: black;
+} */
+
+@media (max-width: 990px) {
+    .social_links {
+        font-size: 16px;
+        width: 80%;
+    }
+}
+@media (max-width: 446px) {
+    .social_links {
+        font-size: 15px;
+        width: 95%;
+    }
+    .contact-link {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* footer */
+
+.footer_main {
+    background-color: var(--bg-color-footer);
+    color: var(--text-color-footer);
+    padding: 20px;
+}
+
+.footer_content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_content .copy_right_reserve_name {
+    font-family: var(--ff-copy-right-name);
+    font-size: 20px;
+}
+.footer_content .footer_left {
+    margin: 0;
+    padding: 0;
+    opacity: .8;
+}
+.footer_content .footer_logo {
+    font-family: var(--ff-nav-logo);
+    font-size: 30px;
+}
+
+/* Responsive Design: Stack items for mobile screens */
+@media (max-width: 768px) {
+    .footer_content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer_content .footer_logo {
+        margin-top: 10px;
+    }
+}
