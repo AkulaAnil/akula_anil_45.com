@@ -49,8 +49,8 @@
     --text-color-navbar-mobile: #978f8f;
     --text-color-navbar-hover: #0082e6;
     --text-banner_section_span_hi: #3aafa9;
-    --text-banner_section_text: #acb9b9;
-    --text-banner_section_role_text: lightgrey;
+    --text-banner_section_text: #eadfdf;
+    --text-banner_section_role_text: #f0e9e9; /* #ffffff */
     --text-color-section-title: #6A0572;
     --text-color-card_item: white;
     --text-color-card_key: #f6f1f0;
@@ -225,7 +225,9 @@ body {
 .banner_section_content p {
     font-size: 35px;
 }
-
+.my_name {
+    color: var(--text-color-banner-my-name);
+}
 .banner_span {
     font-weight: 700;
     color: var(--text-banner_section_span_hi);
@@ -346,12 +348,12 @@ body {
 */
 
 #myCarousel {
-    height: 80vh;
+    /* height: 80vh; */
     background-color: var(--bg-color-coursel_block);
 }
 .carousel_item {
     width: 100%;
-    height: 75vh !important;
+    height: 70vh !important;
 }
 
 .text_wrapping_left_side {
@@ -378,6 +380,10 @@ body {
     left: 10% !important;
 }
 
+.carousel_item .roles_resp {
+    font-size: 14px;
+}
+
 @media (max-width: 990px) {
     .text_wrapping_left_side {
         font-size: 16px;
@@ -392,6 +398,13 @@ body {
     }
     .text_wrapping_left_side p {
         margin: 2px 0;
+    }
+    .carousel_item .roles_resp {
+        font-size: 10px;
+    }
+    .carousel_item .carousel-caption {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
