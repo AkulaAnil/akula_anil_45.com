@@ -39,8 +39,8 @@
     --bg-color-navbar-mobile: #17252A;
     --bg-color-card_item: #88BDBC;
     --bg-color-coursel_block: #254E58;
-    --bg-color-education_block: #687864;
-    --bg-color-skills_circle-block: #99CED3;
+    --bg-color-education_block: #88BDBC;
+    --bg-color-skills_circle-block: #254e58;
     --bg-color-contact_links-block: #2B7A78;
     --bg-color-footer: #333;
     --bg-color-accordian-block: #9ab1ba;
@@ -51,20 +51,21 @@
     --text-banner_section_span_hi: #3aafa9;
     --text-banner_section_text: #acb9b9;
     --text-banner_section_role_text: lightgrey;
-    --text-color-section-title: #697a7a;
+    --text-color-section-title: #6A0572;
     --text-color-card_item: white;
-    --text-color-card_key: #7e7676;
-    --text-color-card_value: #658a8b;
-    --text-color-coursel-key: #88bdbc;
-    --text-color-coursel-value: #f5f5f5;
-    --text-color-education-block: #929f8f;
-    --text-color-education-right_side-numbers: #6a6767;
-    --text-color-skills_circle-value: #3498db;
-    --text-color-skills_circle-text: #71949a;
+    --text-color-card_key: #f6f1f0;
+    --text-color-card_value: #002B36;
+    --text-color-coursel-key: #FFE5D9;
+    --text-color-coursel-value: #BCC2C7;
+    --text-color-education-block: #333333;
+    --text-color-education-right_side-numbers: #555555;
+    --text-color-skills_circle-value: #BFD7EA;
+    --text-color-skills_circle-text: #d4ceb8;
     --text-color-contact_links-text: #b7cccb;
     --text-color-footer: lightgrey;
 
-    --ff-entire-body: cursive, sans-serif;
+    --ff-entire-body: Arapey, sans-serif;
+    /* --ff-entire-body: cursive, sans-serif; */
     --ff-nav-logo: 'Arizonia';
     --ff-copy-right-name: 'Grechen Fuemen';
 
@@ -123,7 +124,7 @@ body {
 .header_main .nav_bar .nav_list li a {
     color: var(--text-color-navbar);
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .header_main .nav_bar .nav_list li a.active, .header_main .nav_bar .nav_list li a:hover {
@@ -164,7 +165,7 @@ body {
         line-height: 30px;
     }
     .header_main .nav_bar .nav_list li a {
-        font-size: 20px;
+        font-size: 25px;
         color: var(--text-color-navbar-mobile);
     }
     .header_main .nav_bar .nav_list li a.active, .header_main .nav_bar .nav_list li a:hover {
@@ -216,13 +217,13 @@ body {
 .banner_section_content h2 {
     margin: 5px;
     padding: 0;
-    font-size: 50px;
+    font-size: 60px;
 }
 .banner_section_content .banner_name {
     font-family: "Kaushan Script", cursive;;
 }
 .banner_section_content p {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .banner_span {
@@ -242,23 +243,20 @@ body {
     .banner_with_image {
         height: 70vh;
     }
-    .banner_section_content {
-        font-size: 20px;
-    }
     .banner_section_content h2 {
-        font-size: 30px;
+        font-size: 40px;
     }
     .banner_section_content p {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
 @media (max-width: 426px) {
     .banner_section_content h2 {
-        font-size: 22px;
+        font-size: 30px;
     }
     .banner_section_content p {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
@@ -271,6 +269,8 @@ body {
 }
 .section_title {
     color: var(--text-color-section-title);
+    font-size: 2.75rem;
+    margin-top: 1%;
 }
 
 .companies_list {
@@ -281,10 +281,7 @@ body {
 
 .card_block {
     width: 100%;
-    margin: 10px 0;
-}
-.companies_list :not(:first-child) {
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 .card_item {
@@ -298,6 +295,12 @@ body {
     transform: scale(.9);
     transition: all .5s;
 }
+.card_item h4 {
+    font-size: 22px;
+}
+.card_item h5 {
+    font-size: 20px;
+}
 
 .company_logo {
     width: 200px;
@@ -305,7 +308,7 @@ body {
 }
 .company_key {
     color: var(--text-color-card_key);
-    font-weight: bold;
+    font-weight: 500;
 }
 .company_value {
     color: var(--text-color-card_value);
@@ -341,34 +344,54 @@ body {
 /*
    ------------------------------ COURSEL STYLES CODE ------------------------------
 */
+
+#myCarousel {
+    height: 80vh;
+    background-color: var(--bg-color-coursel_block);
+}
 .carousel_item {
     width: 100%;
-    height: 400px !important;
-    background-color: var(--bg-color-coursel_block);
+    height: 75vh !important;
 }
 
 .text_wrapping_left_side {
     text-align: left !important;
     /* padding: 10px; */
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .carousel_project_name_strong {
     color: var(--text-color-coursel-key);
-    font-weight: 600;
+    font-weight: 500;
 }
 .carousel_project_name_text {
     color: var(--text-color-coursel-value);
+    /* font-size: 18px; */
+}
+.icon_click {
+    width: 8% !important;
+}
+.carousel_item .carousel-caption {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    width: 80% !important;
+    left: 10% !important;
 }
 
 @media (max-width: 990px) {
     .text_wrapping_left_side {
-        font-size: 10px;
+        font-size: 16px;
+    }
+    .text_wrapping_left_side p {
+        margin: 5px 0;
     }
 }
 @media (max-width: 426px) {
     .text_wrapping_left_side {
-        font-size: 8px;
+        font-size: 13px;
+    }
+    .text_wrapping_left_side p {
+        margin: 2px 0;
     }
 }
 
@@ -396,14 +419,14 @@ body {
 }
 
 .timeline-item h4, .timeline-item h5, .timeline-item h6 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: var(--text-color-education-block);
 }
 
 .timeline-item span {
     font-style: italic;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--text-color-education-right_side-numbers);
 }
 
@@ -432,15 +455,15 @@ body {
     .timeline {
         width: 95%;
     }
-    .timeline-item h4 {
+    /* .timeline-item h4 {
         font-size: 1.2rem;
-    }
+    } */
     .timeline-item h5 {
-        font-size: 1.1rem;
+        font-size: 14px;
     }
-    .timeline-item h6 {
+    /* .timeline-item h6 {
         font-size: 1rem;
-    }
+    } */
 }
 
 /* skills */
@@ -478,7 +501,7 @@ body {
 }
 
 .skill-value {
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: var(--text-color-skills_circle-value); 
     position: absolute;
     top: 50%;
@@ -488,24 +511,25 @@ body {
 
 .circle h3 {
     position: absolute;
-    top: 15%;
+    top: 8%;
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.75rem;
     color: var(--text-color-skills_circle-text);
 }
 .circle h4 {
     position: absolute;
-    bottom: 30px;
-    width: 100%;
+    bottom: 10px;
+    width: 70%;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     color: var(--text-color-skills_circle-text);
 }
 .back_to_top {
     float: right;
     margin-right: 2%;
     border-bottom: 2px solid var(--bg-color-card_item);
+    font-size: 1.75rem;
 }
 .back_to_top a {
     text-decoration: none !important;
@@ -514,6 +538,26 @@ body {
 .back_to_top a:hover {
     text-decoration: none;
     color: var(--bg-color-navbar);
+}
+
+@media(max-width: 990px) {
+    .back_to_top {
+        margin-top: 3%;
+    }
+    .skill-circles {
+        gap: 20px;
+        width: 95%;
+    }
+}
+@media(max-width: 446px) {
+    .skill-circles {
+        gap: 10px;
+        width: 99%;
+    }
+    .circle {
+        width: 130px;
+        height: 130px;
+    }
 }
 
 /* personal info */
@@ -534,6 +578,7 @@ body {
     width: 50%;
     margin: auto;
     font-size: 18px;
+    text-align: center;
 }
 /* .social_links a {
     color: black;
@@ -547,7 +592,7 @@ body {
 }
 @media (max-width: 446px) {
     .social_links {
-        font-size: 15px;
+        font-size: 18px;
         width: 95%;
     }
     .contact-link {
@@ -570,6 +615,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 18px;
 }
 
 .footer_content .copy_right_reserve_name {
@@ -583,7 +629,7 @@ body {
 }
 .footer_content .footer_logo {
     font-family: var(--ff-nav-logo);
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* Responsive Design: Stack items for mobile screens */
