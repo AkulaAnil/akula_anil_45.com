@@ -374,10 +374,10 @@ body {
     width: 8% !important;
 }
 .carousel_item .carousel-caption {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    width: 80% !important;
-    left: 10% !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    left: 10%;
 }
 
 .carousel_item .roles_resp {
@@ -386,7 +386,7 @@ body {
 
 @media (max-width: 990px) {
     .text_wrapping_left_side {
-        font-size: 16px;
+        font-size: 15px;
     }
     .text_wrapping_left_side p {
         margin: 5px 0;
@@ -394,7 +394,8 @@ body {
 }
 @media (max-width: 426px) {
     .text_wrapping_left_side {
-        font-size: 13px;
+        /* font-size: 3.6vw; */
+        font-size: 14px;
     }
     .text_wrapping_left_side p {
         margin: 2px 0;
@@ -404,7 +405,24 @@ body {
     }
     .carousel_item .carousel-caption {
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 376px) {
+    .text_wrapping_left_side {
+        font-size: 3.9vw;
+    }
+    .carousel_item .carousel-caption{
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 321px) {
+    .text_wrapping_left_side {
+        font-size: 4.2vw;
+    }
+    .carousel_item .carousel-caption{
+        padding-bottom: 12px;
     }
 }
 
