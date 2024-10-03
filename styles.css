@@ -52,6 +52,7 @@
     --text-color-navbar-hover: #0082e6;
     --text-banner_section_span_hi: #3aafa9;
     --text-banner_section_text: #eadfdf;
+    --text-color-banner-my-name: #e5dad9;
     --text-banner_section_role_text: #f0e9e9; /* #ffffff */
     --text-color-section-title: #6A0572;
     --text-color-card_item: white;
@@ -358,7 +359,7 @@ body {
 
 @media (max-width: 426px) {
     .banner_section_content h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
     .banner_section_content p {
         font-size: 20px;
@@ -498,13 +499,15 @@ body {
 @media (max-width: 426px) {
     .text_wrapping_left_side {
         /* font-size: 3.6vw; */
-        font-size: 14px;
+        /* font-size: 14px; */
+        font-size: 15px;
     }
     .text_wrapping_left_side p {
         margin: 2px 0;
     }
     .carousel_item .roles_resp {
-        font-size: 10px;
+        /* font-size: 10px; */
+        font-size: 12px;
     }
     .carousel_item .carousel-caption {
         padding-top: 0;
