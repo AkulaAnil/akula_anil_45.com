@@ -67,21 +67,8 @@
     --text-color-footer: lightgrey;
 
     --ff-entire-body: Arapey, sans-serif;
-    /* --ff-entire-body: cursive, sans-serif; */
     --ff-nav-logo: 'Arizonia';
     --ff-copy-right-name: 'Grechen Fuemen';
-
-    /* --bg-color-navbar: #69688a; */
-
-    /* --ff-body: 'Arapey'; */
-    /* --ff-body: 'Abel'; */
-    /* --ff-body: 'Bad Script'; */
-    /* --ff-body: 'Bellota'; */
-    /* --ff-body: 'Atma'; */
-    /* --ff-body: sans-serif; */
-
-    /* --ff-nav-logo: 'Alex Brush';
-    --ff-nav-logo: 'Akronim'; */
 }
 
 * {
@@ -92,6 +79,35 @@
 body {
     background-color: var(--bg-color-body);
     font-family: var(--ff-entire-body) !important;
+}
+
+@keyframes custom_animation_effect {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.my_animation_efffect_banner_content,
+.my_animation_efffect_footer {
+    animation: custom_animation_effect 2s ease-in-out;
+}
+.my_animation_efffect_card,
+.my_animation_efffect_carousel,
+.my_animation_efffect_education_block,
+.my_animation_efffect_skills_block,
+.my_animation_efffect_social_link {
+    animation: custom_animation_effect 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.my_animation_efffect_social_link {
+    animation: custom_animation_effect 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .header_main {
@@ -193,6 +209,35 @@ body {
 
 /* banner section */
 
+/* .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid var(--bg-color-navbar);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.10em;
+    animation: typing 3.5s steps(40, end), hide-caret 0s 3.5s forwards;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes hide-caret {
+    to {
+      border-color: transparent;
+    }
+} */
+.my_name {
+    color: var(--text-color-banner-my-name);
+    display: inline-block;
+    /* width: 60vw; */
+    /* width: auto; typewriter */
+}
+
 .banner_with_image {
     background-image: url("assets/images/my_crop_3.jpg");
     background-position: center;
@@ -202,6 +247,7 @@ body {
     width: auto;
     height: auto;
     /* height: 100vh; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); */
 }
 
 .banner_section_content {
@@ -246,10 +292,6 @@ body {
 }
 .banner_section_content p {
     font-size: 35px;
-}
-.my_name {
-    color: var(--text-color-banner-my-name);
-    /* width: 95vw; typewriter */
 }
 .banner_span {
     font-weight: 700;
