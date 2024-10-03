@@ -81,6 +81,8 @@ body {
     font-family: var(--ff-entire-body) !important;
 }
 
+/* Animation effect Start */
+
 @keyframes custom_animation_effect {
     from {
         opacity: 0;
@@ -109,6 +111,40 @@ body {
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
+/* Animation effect End */
+
+/* Name Typeing effect Start */
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid var(--bg-color-navbar);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.10em;
+    width: max-content;
+    animation: typing 4s steps(20), hide-caret 0s 4s forwards;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes hide-caret {
+    to {
+      border-color: transparent;
+    }
+}
+
+@media (max-width: 769px) {
+    .typewriter {
+        font-size: 15px;
+    }
+}
+/* Name Typeing effect End */
 
 .header_main {
     background-color: var(--bg-color-navbar);
@@ -209,33 +245,9 @@ body {
 
 /* banner section */
 
-/* .typewriter {
-    display: inline-block;
-    overflow: hidden;
-    border-right: 0.15em solid var(--bg-color-navbar);
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.10em;
-    animation: typing 3.5s steps(40, end), hide-caret 0s 3.5s forwards;
-}
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@keyframes hide-caret {
-    to {
-      border-color: transparent;
-    }
-} */
 .my_name {
     color: var(--text-color-banner-my-name);
     display: inline-block;
-    /* width: 60vw; */
-    /* width: auto; typewriter */
 }
 
 .banner_with_image {
@@ -253,6 +265,7 @@ body {
 .banner_section_content {
     color: var(--text-banner_section_text);
     width: 50%;
+    /* width: max-content; */
     padding-block: 20%;
     margin-left: 2%;
     /* color: white;
@@ -287,8 +300,33 @@ body {
     padding: 0;
     font-size: 60px;
 }
+/* @keyframes name_type_writer {
+    to {
+        left: 100%;
+    }
+}
+.banner_section_content .banner_name::before,
+.banner_section_content .banner_name::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.banner_section_content .banner_name::before {
+    background-color: green;
+    animation: name_type_writer 4s 4s steps(17) forwards;
+}
+.banner_section_content .banner_name::after {
+    width: 0.125rem;
+    background-color: red;
+    animation: name_type_writer 4s steps(17) forwards;
+} */
 .banner_section_content .banner_name {
-    font-family: "Kaushan Script", cursive;;
+    font-family: "Kaushan Script", cursive;
+    position: relative;
+    width: max-content;
 }
 .banner_section_content p {
     font-size: 35px;
